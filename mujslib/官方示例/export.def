@@ -1,0 +1,14 @@
+EXPORTS
+CreatNewJsObj @1
+DestroyJsObj @2
+RegFunction @3
+js_returnNull @4
+js_returnBoolean @5
+js_returnNumber @6
+js_returnlString @7
+js_getBoolean @8
+js_getNumber @9
+js_getInt32 @10
+js_getInt16 @11
+js_getString @12
+ExecuteJsCode @13

@@ -1,0 +1,5 @@
+1.获取js对象指针(js_State*)
+2.使用js_newcfunction创建函数，指定函数指针、js内部的函数名称
+3.使用js_setglobal声明为全局函数
+4.执行js命令时会调用函数指针，传入一个js_State*的参数，使用js_toxxx()转换类型
+5.函数返回前使用js_pushxxx完成函数返回
