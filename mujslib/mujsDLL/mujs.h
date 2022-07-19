@@ -40,7 +40,7 @@ extern "C" {
 typedef struct js_State js_State;
 
 typedef void *(*js_Alloc)(void *memctx, void *ptr, int size);
-typedef void (*js_Panic)(js_State *J);
+typedef void (__stdcall* js_Panic)(js_State *J);
 typedef void (*js_CFunction)(js_State* J);
 typedef void(__stdcall* js_CPPFunction)(js_State* J);
 
@@ -48,7 +48,7 @@ typedef void (*js_Finalize)(js_State *J, void *p);
 typedef int (*js_HasProperty)(js_State *J, void *p, const char *name);
 typedef int (*js_Put)(js_State *J, void *p, const char *name);
 typedef int (*js_Delete)(js_State *J, void *p, const char *name);
-typedef void (*js_Report)(js_State *J, const char *message);
+typedef void (__stdcall* js_Report)(js_State *J, const char *message);
 
 /* Basic functions */
 js_State *js_newstate(js_Alloc alloc, void *actx, int flags);

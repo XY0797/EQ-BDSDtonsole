@@ -1315,7 +1315,6 @@ void js_throw(js_State *J)
 	}
 	if (J->panic)
 		J->panic(J);
-	abort();
 }
 
 /* Main interpreter loop */

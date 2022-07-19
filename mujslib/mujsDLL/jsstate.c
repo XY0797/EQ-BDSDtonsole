@@ -27,16 +27,16 @@ static void *js_defaultalloc(void *actx, void *ptr, int size)
 	return realloc(ptr, (size_t)size);
 }
 
-static void js_defaultreport(js_State *J, const char *message)
+static void __stdcall js_defaultreport(js_State *J, const char *message)
 {
 	fputs(message, stderr);
 	fputc('\n', stderr);
 }
 
-static void js_defaultpanic(js_State *J)
+static void __stdcall js_defaultpanic(js_State *J)
 {
 	js_report(J, "uncaught exception");
-	/* return to javascript to abort */
+	abort();
 }
 
 int js_ploadstring(js_State *J, const char *filename, const char *source)

@@ -28,9 +28,14 @@ static char* Utf8ToGB2312(const char* utf8)//记得释放内存！！
 }
 
 
-
-js_State* WINAPI CreatNewJsObj() {//创建js对象，返回指针
-	return js_newstate(NULL, NULL, JS_STRICT);
+//创建js对象，返回指针
+//panicFunction要求一个参数接收js对象指针
+//reportFunction要求两个参数，第一个接收指针，第二个接收错误信息
+js_State* WINAPI CreatNewJsObj(js_Panic panicFunction, js_Report reportFunction) {
+	js_State* ptr = js_newstate(NULL, NULL, JS_STRICT);
+	js_atpanic(ptr,panicFunction);
+	js_setreport(ptr, reportFunction);
+	return ptr;
 }
 
 //销毁js对象
@@ -38,17 +43,18 @@ void WINAPI DestroyJsObj(js_State* jsObjPointer) {
 	js_freestate(jsObjPointer);
 }
 //注册js函数，函数指针必须有一个参数接收js对象
-void WINAPI RegFunction(js_State* jsObjPointer, js_CPPFunction FunctionPointer, const char* FunctionNameInJs, long ArgumentNumber) {
+void WINAPI RegFunction(js_State* jsObjPointer, js_CPPFunction FunctionPointer, char* FunctionNameInJs, long ArgumentNumber) {
 	char* UTF8FunctionNameInJs=GB2312ToUtf8(FunctionNameInJs);
 	js_newcppfunction(jsObjPointer, FunctionPointer, UTF8FunctionNameInJs, ArgumentNumber);
 	js_setglobal(jsObjPointer, UTF8FunctionNameInJs);
-	if (UTF8FunctionNameInJs) delete[] UTF8FunctionNameInJs;
+	delete[] UTF8FunctionNameInJs;
 }
 
 //执行js代码
-void WINAPI ExecuteJsCode(js_State* jsObjPointer, const char* JsCode) {
-	//char* UTF8JsCode = GB2312ToUtf8(JsCode);
-	js_dostring(jsObjPointer, JsCode);
+void WINAPI ExecuteJsCode(js_State* jsObjPointer, char* JsCode) {
+	char* UTF8JsCode = GB2312ToUtf8(JsCode);
+	js_dostring(jsObjPointer, UTF8JsCode);
+	delete[] UTF8JsCode;
 }
 
 
@@ -69,7 +75,7 @@ void WINAPI js_returnNumber(js_State* J, double v) {
 }
 
 //函数返回易语言文本型，注意指定长度
-void WINAPI js_returnlString(js_State* J, const char* v, int n) {
+void WINAPI js_returnlString(js_State* J, char* v, int n) {
 	js_pushlstring(J, v, n);
 }
 
@@ -97,12 +103,12 @@ short WINAPI js_getInt16(js_State* J, int idx) {
 
 //易语言文本型
 const char* WINAPI js_getString(js_State* J, int idx) {
-	//char* GB2312Str = Utf8ToGB2312(js_tostring(J, idx));
-	//return GB2312Str;
-	return js_tostring(J, idx);
+	char* GB2312Str = Utf8ToGB2312(js_tostring(J, idx));
+	return GB2312Str;
+	//return js_tostring(J, idx);
 }
 
 //释放文本型指针
 void WINAPI deleteString(char* lpStr) {
-	if (lpStr) delete[] lpStr;
+	delete[] lpStr;
 }
