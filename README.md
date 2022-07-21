@@ -1,6 +1,6 @@
 <h1 align="center">EQ-BDS面板 || 一站式BDS开服解决方案</h1>
 
-![图片](./docs/images/EQ-BDSDtonsole.png)
+![图片](./docs/images/EQ-BDSDtonsole.webp)
 
 <p align="center">
   <img src="https://img.shields.io/github/v/release/XY0797/EQ-BDSDtonsole" />
