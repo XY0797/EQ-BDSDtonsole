@@ -22,7 +22,7 @@ extern "C" {
 	__declspec(dllexport) void WINAPI js_returnNull(js_State* J); //函数返回null型
 	__declspec(dllexport) void WINAPI js_returnBoolean(js_State* J, int v); //函数返回易语言逻辑型
 	__declspec(dllexport) void WINAPI js_returnNumber(js_State* J, double v); //函数返回易语言双精度小数型
-	__declspec(dllexport) void WINAPI js_returnlString(js_State* J, char* v, int n); //函数返回易语言文本型，注意指定长度
+	__declspec(dllexport) void WINAPI js_returnlString(js_State* J, char* v); //函数返回易语言文本型
 
 	__declspec(dllexport) int WINAPI js_getBoolean(js_State* J, int idx); //易语言逻辑型
 	__declspec(dllexport) double WINAPI js_getNumber(js_State* J, int idx); //易语言双精度小数型

@@ -75,8 +75,17 @@ void WINAPI js_returnNumber(js_State* J, double v) {
 }
 
 //函数返回易语言文本型，注意指定长度
-void WINAPI js_returnlString(js_State* J, char* v, int n) {
-	js_pushlstring(J, v, n);
+void WINAPI js_returnlString(js_State* J, char* v) {
+	int len = MultiByteToWideChar(CP_ACP, 0, v, -1, NULL, 0);
+	wchar_t* wstr = new wchar_t[len + 1];
+	memset(wstr, 0, len + 1);
+	MultiByteToWideChar(CP_ACP, 0, v, -1, wstr, len);
+	len = WideCharToMultiByte(CP_UTF8, 0, wstr, -1, NULL, 0, NULL, NULL);
+	char* utf8 = new char[len + 1];
+	WideCharToMultiByte(CP_UTF8, 0, wstr, -1, utf8, len, NULL, NULL);
+	if (wstr) delete[] wstr;
+	js_pushlstring(J, utf8, len);
+	delete[] utf8;
 }
 
 

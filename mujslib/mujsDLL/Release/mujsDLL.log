@@ -1,34 +1,8 @@
-﻿  pch.cpp
-  dllmain.cpp
-  jsarray.c
-  jsboolean.c
-  jsbuiltin.c
-  jscompile.c
-  jsdate.c
-  jsdtoa.c
-  jsdump.c
-  jserror.c
-  jsfunction.c
-  jsgc.c
-  jsintern.c
-  jslex.c
-  jsmath.c
-  jsnumber.c
-  jsobject.c
-  json.c
-  jsparse.c
-  jsproperty.c
-  jsregexp.c
-  jsrepr.c
-  正在编译...
-  jsrun.c
-  jsstate.c
-  jsstring.c
-  jsvalue.c
+﻿  dllmain.cpp
     正在创建库 D:\EQ-BDS面板开放平台\mujslib\Release\mujsDLL.lib 和对象 D:\EQ-BDS面板开放平台\mujslib\Release\mujsDLL.exp
   正在生成代码
-  43 of 720 functions ( 6.0%) were compiled, the rest were copied from previous compilation.
-    3 functions were new in current compilation
-    155 functions had inline decision re-evaluated but remain unchanged
+  1 of 720 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    28 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   mujsDLL.vcxproj -> D:\EQ-BDS面板开放平台\mujslib\Release\mujsDLL.dll
