@@ -1,4 +1,4 @@
-#EQ-BDS面板开放平台
+# EQ-BDS面板开放平台
 
 鉴于易语言的特殊性,EQ面板不会全部开源，否则可能被某些无视开源协议的人用于不法用途
 
@@ -6,6 +6,8 @@
 
 同时本仓库也会保存软件成品
 
-#License
+# License
+
 相关源代码以MPL-2.0协议开源
+
 https://opensource.org/licenses/MPL-2.0
