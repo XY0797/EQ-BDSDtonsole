@@ -1,6 +1,6 @@
 <h1 align="center">EQ-BDS面板 || 一站式BDS开服解决方案</h1>
 
-![图片](https://socialify.git.ci/XY0797/EQ-BDSDtonsole/image?description=1&descriptionEditable=EQ-BDS%E9%9D%A2%E6%9D%BF&logo=https%3A%2F%2Feq-software.coding.net%2Fp%2Feq_bds_dtonsole%2Fd%2Feq_bds_dtonsole_open%2Fgit%2Fraw%2Fmaster%2Fdocs%2Fimages%2F28456686.png&owner=1&pattern=Floating%20Cogs)
+![图片](https://eq-software.coding.net/p/eq_bds_dtonsole/d/eq_bds_dtonsole_open/git/raw/master/docs/images/EQ-BDSDtonsole.png)
 
 <p align="center">
   <img src="https://img.shields.io/github/v/release/XY0797/EQ-BDSDtonsole" />
