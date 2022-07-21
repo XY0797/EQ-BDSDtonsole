@@ -1,9 +1,0 @@
-<script src="./base/jquery-3.6.0.min.js"></script>
-<script src="./base/marked.min.js"></script>
-<div id="content"></div>
-
-<script>
-    $.get('./p/eq_bds_dtonsole/d/eq_bds_dtonsole_open/git/raw/master/文档/EQ-BDS面板用户手册/EQ-BDS面板用户手册.md', function(response, status, xhr){
-        $("#content").html(marked(response));
-    });
-</script>
