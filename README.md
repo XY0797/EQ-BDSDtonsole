@@ -1,6 +1,6 @@
 <h1 align="center">EQ-BDS面板 || 一站式BDS开服解决方案</h1>
 
-![图片](./docs/images/EQ-BDSDtonsole.png)
+![图片](https://socialify.git.ci/XY0797/EQ-BDSDtonsole/image?description=1&descriptionEditable=EQ-BDS%E9%9D%A2%E6%9D%BF&logo=https%3A%2F%2Feq-software.coding.net%2Fp%2Feq_bds_dtonsole%2Fd%2Feq_bds_dtonsole_open%2Fgit%2Fraw%2Fmaster%2Fdocs%2Fimages%2F28456686.png&owner=1&pattern=Floating%20Cogs)
 
 <p align="center">
   <img src="https://img.shields.io/github/v/release/XY0797/EQ-BDSDtonsole" />
@@ -52,16 +52,14 @@
 ## 👤 **XY0797**
 
 - ### QQ:  XY0797  1559095867
+
 - ### e-mail:  1559095867@qq.com
 
 # 支持我们
 
 ### 如果您觉得本项目对您有用的话，请⭐️本代码仓库
-### Please ⭐️ this repository if this project helped you!
 
-<a href="https://www.patreon.com/FranckAbgrall">
-  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
+### Please ⭐️ this repository if this project helped you!
 
 # 📝 开源协议
 
