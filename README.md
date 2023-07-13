@@ -19,7 +19,7 @@
 
 (介绍页有下载与食用方法)
 
-+ #### MineBBS帖子：https://www.minebbs.com/resources/eq-bds-3-2.4289/
++ #### MineBBS帖子：https://www.minebbs.com/resources/eq-bds-3-8.4289/
 + #### QQ群：👉[1072180746](https://jq.qq.com/?_wv=1027&k=jPV9ohWe)👈
 
 # 💾 项目引用
