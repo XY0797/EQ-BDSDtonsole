@@ -15,8 +15,6 @@
 > #### 一个稳定、易用、扩展性强的Windows BDS面板
 > #### 专为BDS打造，集成了大量功能，采用分体式架构，稳定好用
 
-# 点这里看介绍👉[介绍页](https://xy0797.github.io/EQ-BDSDtonsoleDocs/)👈
-
 (介绍页有下载与食用方法)
 
 + #### MineBBS帖子：https://www.minebbs.com/resources/eq-bds-3-8.4289/
